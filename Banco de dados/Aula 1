@@ -1,0 +1,18 @@
+A importância do procedimento de analisar os dados, modelar uma tabela, uma entidade, veremos que não estamos perdendo tempo, não se precipitar na criação de uma tabela é o melhor caminho 
+a se seguir.
+Banco de dados pode ser digital ou não.
+Banco de dados passa por uma modelagem.
+Existem 3 partes principais:
+Algoritmo(Volumetria) - Como o banco de dados é desenvolvido, visando sempre a melhor forma de otimizar o espaço utilizado.
+Performance - É a maneira de otimizar o banco de dados e facilitar o uso e acesso as informações quando necessário
+Segurança - Como diz o nome, é o método para garantir a segurança e depende da performance.
+Antigamente os Banco de Dados era feito em arquivo txt
+Banco de dados relacional - Foi uma inovação muito grande na forma de armazenamento de dados e uso dos banco de dados, onde foi permitido relacionar os dados e poder deixar de usar 
+os arquivos TXT e realmente utilizar o banco de dados.
+SGDB - Sistema gerenciador de banco de dados. Ex: Mysql,postergreen,mariadb,Oracle,etc.
+Antigamente as linhas de código sobre aonde seria armazenado estava incluido dentro do programa,atualmente o programa não sabe essas informações, o responsável por isso é o SGDB.
+Todo e qualquer SGDB fala em SQL(A linguagem própria do Banco de Dados). O SQL tem um conjunto universal de comandos, cada SQL de cada banco são feitas pequenas personalizações.
+Banco de dados é o conjunto de arquivos que o SGDB manipula.
+Entidade- Uma entidade é como eu vou representar aquilo que está relacionado a algo(funcionários, carros, produtos, etc) nos diagramas.
+Tabela - É a área onde eu vou programar efetivamente os dados de uma entidade.
+Campo - Unidade de dados que terei na minha tabela.
