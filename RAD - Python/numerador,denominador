@@ -1,0 +1,62 @@
+
+def divide(x,y):
+    try:
+        resultado = x / y
+    except ZeroDivisionError:
+        print("Opa,pera ai!Você está tentando dividir por zero!!!")
+    else:
+        print("Certa!A sua resposta é: ",resultado)
+    finally:
+        #Este bloco sempre será executado!
+        #Independente de ocorrer erro ou não
+        print("Isso sempre aparecerá")
+
+divide(3,2)
+divide(3,0)
+def tentando():
+    try:
+        f = open("Nomes.txt")
+        s = f.readline()
+        i = int(s.strip())
+    except FileNotFoundError:
+        print('Arquivo "Nomes.txt" não encontrado')
+    except IOError:
+        print("Erro na abertura do arquivo!")
+    except ValueError:
+        print("Formato inválido encontrado no arquivo!")
+    except Exception as e:
+        print(f"Erro inesperado {e}")
+        raise
+def dividir (numerador,denominador):
+    #Se o denominador for zero, levanta uma exceção do tipo ValueError
+    if denominador == 0:
+        raise ValueError("Divisão por zero não é permitida!")
+    return numerador/denominador
+try:
+    resultado = dividir (10,0)
+    print("Resultado:",resultado)
+except ValueError as erro:
+    #Capturamos a exceção e exibimos a mensagem de erro
+    print("Ocorreu um erro:",erro)
+#Definindo uma exceção personalizada
+class MeuErro(Exception):
+    pass
+def dividir(numerador,denominador):
+    if denominador == 0:
+        #Lança a exceção personalizada com uma mensagem de erro
+        raise MeuErro("Divisão por zero não é permitida!")
+    return numerador / denominador
+try:
+    #Tentativa de realizar a divisão
+    resultado = dividir (10,0)
+    print("Resultado:" ,resultado)
+except MeuErro as erro:
+    #Captura e trata a exceção personalizada
+    print("Ocorreu um erro personalizado:",erro)#
+
+
+
+
+if __name__ == "__name__":
+   dividir(numerador,denominador)
+    

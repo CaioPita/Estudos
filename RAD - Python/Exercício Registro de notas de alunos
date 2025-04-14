@@ -1,0 +1,69 @@
+class Aluno:
+
+    def__init__(self,nome,nota1,nota2,nota3):
+        self.nome  = nome
+        self.nota1 = nota1
+        self.nota2 = nota2
+        self.nota3 = nota3
+    def calcular_media(self):
+        try:
+            media=(self.nota1 + self.nota2 +self.nota3)/3
+                return media
+            except ZeroDivisionError:
+                print("Erro: Não é possível calcular a média com notas zeradas!")
+                    return None
+    def validar_nota(self,nota):
+        try:
+            nota = float(nota)
+            if nota < 0 or nota > 10:
+                raise ValueError
+            return nota
+            except ValueError:
+                print("Erro: nota inválida. Por favor, insira uma nota entre 0 e 10!")
+                return None
+    def registrar_nota(self):
+        try:
+            self.nota1 = self.validar_nota(self,nota1)
+            self.nota2 = self.validar_nota(self,nota2)
+            self.nota3 = self.validar_nota(self,nota3)
+            media = self.calcular_media()
+            if media is not None:
+                print(f"Aluno:{self.nome}")
+                print(f"Nota1:{self.nota1}")
+                print(f"Nota2:{self.nota2}")
+                print(f"Nota3:{self.nota3}")
+                print(f"Média:{media:.2f}")
+            except Exception as e:
+                print(f"Erro:{e}")
+    
+class RegistroNotas:
+    def __init__(self):
+        self.alunos=[]
+    def adicionar_aluno(self,aluno):
+        self.alunos.append(aluno)
+
+    def visualizar_notas(self):
+        for aluno in self.alunos:
+            aluno.registrar_nota()
+
+# Exemplo de uso
+registro = RegistroNotas()
+
+while True:
+    print("1.Adicionar aluno")
+    print("2. Visualizar notas")
+    print("3.Sair")
+    opcao = input("Escolha uma opção: ")
+    if opcao =="1":
+        nome = input("Insira o nome do aluno: ")
+        nota1 = input("Insira a nota1 : ")
+        nota2 = input("Insira a nota2 : ")
+        nota3 = input("Insira a nota3: ")
+        aluno = Aluno(nome,nota1,nota2,nota3)
+        registro.adicionar_aluno(aluno)
+    elif opcao =="2":
+        registro.visualizar_notas()
+    elif opcao =="3":
+        break
+    else:
+        print("Opção inválida.Por favor, tente novamente!")

@@ -1,0 +1,51 @@
+
+def exemplo01():
+    arquivo = open('../nomes.txt','w')
+    arquivo.write("Caio\nVanderson")
+    arquivo.close()
+    
+def exemplo02():
+    arquivo = open('../nomes.txt')
+    print(arquivo.readline())
+    arquivo.close()
+    
+def exemplo03():
+    caminho_arquivo = '../nomes.txt'
+    
+    arquivo = open(caminho_arquivo,'r')
+    
+    linha1 = arquivo.readline()
+    print(f"Linha 1: {linha1}")
+    linha2 = arquivo.readline()
+    print(f"Linha 2: {linha2}")
+    
+    arquivo.close()
+def exemplo04():
+    caminho_arquivo = '../nomes.txt'
+
+    arquivo = open(caminho_arquivo, 'r')   
+    linhas = arquivo.readlines()
+    for i, linha in enumerate (linhas,start=1):
+        print(f"Linha {i}: {linha}")
+def exemplo05():   
+    arquivo = open("nomes.txt",'w')
+    arquivo.write("Caio")
+    arquivo.writelines(["\nCaroline","\nVanderson","\nCaio"])
+    arquivo.close()
+def exemplo06():
+    arquivo =open(caminho_arquivo,'r')
+    linhas = arquivo.readlines()
+
+    for i, linha in enumerate (linhas,start=1):
+        print(f"Linha {i}: {linha}")
+def exemplo07():    
+    caminho_arquivo = "../escrevendo.txt"
+    with open (caminho_arquivo,'w') as arquivo:
+        arquivo.write("Esta é a primeira linha.\n")
+        arquivo.write("Esta é a segunda linha.\n")
+    
+    linhas = ["Esta é a primeira linha em uma lista.\n","Esta é a segunda linha em uma lista.\n"]
+    arquivo.writelines(linhas)
+
+if __name__ == '__main__':
+    exemplo06()

@@ -1,0 +1,105 @@
+def manipulacao_string():
+#Manipulação de String
+    texto = "Nossa aula Manipulando String"
+    print(texto [0:20:15])
+def manipulando_string():
+    texto = "Nossa aula manipulando string."
+    print (len(texto))
+    #Diz a quantidade de letras no texto
+def manipulando_string1():
+    texto = "Nossa aula manipulando string."
+    print(texto.count("a"))
+    #Conta quantos "a" tem no texto
+def manipulando_string2():
+    texto = "Nossa aula manipulando string."
+    print (texto.count("a",5,30))
+    #Conta quantos "a" tem do 5 ao 30
+def manipulando_string3():
+    texto = "Nossa aula manipulando string."
+    print(texto.find("aula"))
+def manipulando_string4():
+    texto = "Nossa aula manipulando string."
+    print(texto.find("Python"))
+def manipulando_string5():
+    texto = "Nossa aula manipulando String."
+    print("String" in texto)
+def manipulando_string6():
+    texto = "Nossa aula manipulando String."
+    print("Raphael" in texto)
+def manipulando_string7():
+    texto = "Nossa aula manipulando String."
+    novo_txt = texto.replace("manipulando","trabalhando com")
+    print(novo_txt)
+def manipulando_string8():
+    texto = "Nossa aula manipulando String."
+    print(texto.startswith("Nossa"))
+    print(texto.startswith("Aula"))
+    print(texto.endswith("Aula"))
+    print(texto.endswith("."))
+def manipulando_string9():
+    texto = "Nossa aula manipulando String."
+    print(texto.lower())
+    print(texto.upper())
+    print(texto.capitalize())
+    print(texto.title())
+    print(texto.swapcase())
+def manipulando_string10():
+    nome =  str(input("Digite o seu nome: "))
+    print(f"Olá,{nome}!")
+    print(f"Olá,{nome.strip()}!")
+    print(nome.rstrip())
+    print(nome.lstrip())
+def manipulando_string11():
+    texto = "Nossa aula manipulando String."
+    posic0 = texto.split()
+    print(posic0[3])
+def manipulando_string12():
+    texto = "Nossa aula manipulando String."
+    print("".join(texto))
+    print(texto.split())
+    print("".join(texto.split()))
+def get_coxinhas(*pedidos):
+    return[f"{pedido} coxinhas" for pedido in pedidos]
+    #salgados_return = get_coxinhas(4,6,8)
+    #print("Usando return: ")
+    #print(salgados_return)
+def get_joelho(*pedidos):
+    for pedido in pedidos:
+        yield f"{pedido} joelho(s)"
+
+def usando_regex():
+    import re
+    texto = "O número de telefone de Raphael é (123) 1456-7890"
+    padrao = r'\(\d{3}\) \d{4}-\d{4}'
+    #Padrão para encontrar números de telefone no formato (XXX) XXX-XXXX
+    
+    Resultado = re.search(padrao,texto)
+    
+    if Resultado:
+        numero_telefone = resultado.group()
+        print("Número de telefone encontrado: ", numero_telefone)
+    else:
+        print("Número de telefone não encontrado.")
+    
+if __name__ == '__main__':
+    #manipulacao_string()
+    #manipulando_string()
+    #manipulando_string1()
+    #manipulando_string2()
+    #manipulando_string3()
+    #manipulando_string4()
+    #manipulando_string5()
+    #manipulando_string6()
+    #manipulando_string7()
+    #manipulando_string8()
+    #manipulando_string9()
+    #manipulando_string10()
+    #manipulando_string11()
+    #manipulando_string12()
+    # salgados_return = get_coxinhas(4,6,8)
+    # print("Usando return: ")
+    # print(salgados_return)
+    # print("\nUsando yield:")
+    # for salgado in get_joelho(4,6,8):
+    #     print(salgado)
+    usando_regex()
