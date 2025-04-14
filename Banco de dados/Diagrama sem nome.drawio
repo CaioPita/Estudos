@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0" version="26.1.0">
+  <diagram name="Página-1" id="MvrbzyDox4Wt_1tos2_W">
+    <mxGraphModel dx="838" dy="449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-44" value="Professores" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-45" value="Cursos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-46" value="Alunos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-47" value="PK-(INT)id_professor&lt;div&gt;FK-(VARCHAR)nome&lt;/div&gt;&lt;div&gt;(VARCHAR)disciplinas&lt;/div&gt;&lt;div&gt;(INT)idade&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="160" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-48" value="PK -(INT)id_curso&lt;div&gt;(VARCHAR)Nome do curso&lt;/div&gt;&lt;div&gt;(INT)tempo de conclusão&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-49" value="PK-(INT)ID_aluno&lt;div&gt;(VARCHAR)Nome&lt;/div&gt;&lt;div&gt;(INT)Idade&lt;/div&gt;&lt;div&gt;(VARCHAR)Endereço&lt;/div&gt;&lt;div&gt;(VARCHAR)Curso&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="160" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.555;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kXjoKvxsPi3jEmVqvRIR-45" target="kXjoKvxsPi3jEmVqvRIR-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.431;entryY=-0.015;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kXjoKvxsPi3jEmVqvRIR-46" target="kXjoKvxsPi3jEmVqvRIR-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.333;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kXjoKvxsPi3jEmVqvRIR-44" target="kXjoKvxsPi3jEmVqvRIR-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="130" />
+              <mxPoint x="610" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-53" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kXjoKvxsPi3jEmVqvRIR-46">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="230" y="130" as="sourcePoint" />
+            <mxPoint x="330" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kXjoKvxsPi3jEmVqvRIR-54" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kXjoKvxsPi3jEmVqvRIR-45">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="490" y="130" as="sourcePoint" />
+            <mxPoint x="590" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

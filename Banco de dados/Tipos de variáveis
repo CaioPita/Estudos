@@ -1,0 +1,12 @@
+Numérico(-
+Inteiro- TinyInt,smallInt,Int,MediumInt,BigInt
+Real - Decimal,float,double, real
+Lógico- Bit,Boolean)
+Data/Tempo - Date, DateTime,TimeStamp,Time, Year
+Literal(
+Caractere - Char,VarChar
+Texto - TinyText,Text,MediumText,LongText
+Binário - TinyBlob,Blob,MediumBlob,LongBlob
+Coleção - Enum,Set
+)
+Espacial - Geometry,Point,Polygon, MultiPolygon

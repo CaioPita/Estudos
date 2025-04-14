@@ -1,0 +1,9 @@
+Create database Banco de dados;
+Create table pessoas(
+nome,
+idade,
+sexo,
+peso,
+altura,
+nacionalidade
+);

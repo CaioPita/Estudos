@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Apr 09, 2025 at 01:53 AM
+- Server version: 8.0.40
+- PHP Version: 8.2.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="sistemas_de_bibliotecas" collation="utf8mb4_0900_ai_ci" charset="utf8mb4">
+            <pma:table name="autores">
+                CREATE TABLE `autores` (
+                  `autor_id` int NOT NULL AUTO_INCREMENT,
+                  `nome_autor` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                  PRIMARY KEY (`autor_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+            </pma:table>
+            <pma:table name="categorias">
+                CREATE TABLE `categorias` (
+                  `categorias_id` int NOT NULL AUTO_INCREMENT,
+                  `nome_categoria` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                  PRIMARY KEY (`categorias_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+            </pma:table>
+            <pma:table name="emprestimo">
+                CREATE TABLE `emprestimo` (
+                  `emprestimo_id` int NOT NULL AUTO_INCREMENT,
+                  `livro_id` int NOT NULL,
+                  `usuario_id` int NOT NULL,
+                  `data_emprestimo` date NOT NULL,
+                  `date_devolucao` date DEFAULT NULL,
+                  PRIMARY KEY (`emprestimo_id`),
+                  KEY `usuario_id` (`usuario_id`),
+                  KEY `livro_id` (`livro_id`),
+                  CONSTRAINT `emprestimo_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+                  CONSTRAINT `emprestimo_ibfk_2` FOREIGN KEY (`livro_id`) REFERENCES `livros` (`livro_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+            </pma:table>
+            <pma:table name="livros">
+                CREATE TABLE `livros` (
+                  `livro_id` int NOT NULL AUTO_INCREMENT,
+                  `titulo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                  `autor_id` int NOT NULL,
+                  `categoria_id` int NOT NULL,
+                  `ano_publicacao` int NOT NULL,
+                  `isbn` varchar(20) NOT NULL,
+                  PRIMARY KEY (`livro_id`),
+                  UNIQUE KEY `isbn` (`isbn`),
+                  KEY `autor_id` (`autor_id`),
+                  KEY `categoria_id` (`categoria_id`),
+                  CONSTRAINT `livros_ibfk_1` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`autor_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+                  CONSTRAINT `livros_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`categorias_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+            </pma:table>
+            <pma:table name="usuarios">
+                CREATE TABLE `usuarios` (
+                  `usuario_id` int NOT NULL AUTO_INCREMENT,
+                  `nome_usuario` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+                  `endereco` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                  `telefone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+                  PRIMARY KEY (`usuario_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'sistemas_de_bibliotecas'
+    -->
+    <database name="sistemas_de_bibliotecas">
+        <!-- Table autores -->
+        <!-- Table categorias -->
+        <!-- Table emprestimo -->
+        <!-- Table livros -->
+        <!-- Table usuarios -->
+    </database>
+</pma_xml_export>
