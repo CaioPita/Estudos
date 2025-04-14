@@ -1,0 +1,15 @@
+A metodologia RAD é caracterizada pelo desenvolvimento do projeto através de etapas iterativas e incrementais,onde um protótipo é entregue ao final de cada ciclo.A proposta é que haja redução nas atividades relacionadas
+ao planejamento em detrimento do processo de desenvolvimento através de um processo que se caracteriza por incrementos de funcionalidades a cada nova iteração. Desse modo, a expectativa é que as equipes produzam mais em
+menos tempo,maximizando a satisfação do cliente,uma vez que ele é envolvido no processo. Isso ocorre por que a RAD é estruturada para que as partes interessadas interajam e possam detectar a necessidade de alterações do
+projeto em tempo real, sem a necessidade de completar longos ciclos de desenvolvimento, e os desenvolvedores possam realizar as implementações rapidamente ao longo das iterações.
+LEVANTAMENTO DE REQUISITOS ->>> DESIGNER DO USUÁRIO ->>>> DESENVOLVIMENTO/CONSTRUÇÃO ->>>>> IMPLEMENTAÇÃO
+O ciclo de vida da RAD enfatiza a entrega rápida de soluções de software, começando com o planejamento de requisitos.
+A RAD visa reduzir burocracia,permitindo iterações e feedback frequente dos usuários, evitando retrabalho.
+A abordagem RAD possui fases, incluindo design do usuário, construção e transição, com interação constante entre desenvolvedores e usuários.
+Comparada a métodos tradicionais, a RAD destaca-se pela interação contínua e clareza proporcionada pelos protótipos.
+Planejamento de requisitos ->>>>>> Design do usuário ->>>>>> Construção ->>>>>> Transcrição
+Modelagem de dados siginifica criar um modelo que explique as características de funcionamento e comportamento de um software a partir do qual ele será criado, facilitando seu entendimento e seu projeto, através das carac-
+terísticas principais que evitarão erros de programação, projeto e funcionamento.
+Geração da aplicação é aonde todas as informações coletadas são codificadas e é construído o sistema que será usado para criar o protótipo.
+Existem dois tipo de projetod RAD : Intensivo ou Faseado.
+Os Requisitos são o pontapé inicial para a definição do escopo de um sistema.
