@@ -1,0 +1,34 @@
+Exercício 1
+nome=input("Digite o nome do usuário da maquina: ")
+disc=input("Digite a sua disciplina de estudo: " )
+print(f"{nome}, seja bem vindo a primeira aula de {disc}")
+
+Exercício 2
+num1=int(input("Digite o primeiro valor: "))
+num2=int(input("Digite o segundo valor: "))
+soma=num1+num2
+prod=num1*num2
+print(f"Os números: {num1} e {num2} somados equivalem a {soma} e produto equivale a {prod} " )
+
+Exercício 3 
+print("************************")
+print("Calculadora de IMC")
+print("************************")
+print("\n")
+nome=input("Digite seu nome: ")
+idade=int(input("Digite a sua idade: "))
+peso=float(input("Digite o seu peso em kg: "))
+altura=float(input("Digite a sua altura em metros: "))
+imc= peso/(altura*altura)#Ou peso/(altura**2)
+print(f" O paciente {nome},possui {idade} anos e está com o índice de massa corporal igual a {imc:.2f}")
+
+Exercício 4
+
+nome=input("Digite seu nome: ")
+cpf=int(input("Digite o seu cpf: "))
+slbr=float(input("Digite o seu salário bruto: "))
+fgts=slbr*0.08
+print(f"O usuário {nome}, do cpf {cpf}, tem como salário bruto {slbr} e será recolhido {fgts} do seu fgts. " )
+
+
+
