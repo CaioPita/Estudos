@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <style>
+        body {
+            background-color: white; 
+            color: black; 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        #darkModeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escuro Escurinho...</h1>
+    <button id="darkModeButton">Escuridãoooooooooooooooo</button>
+    <h1>HAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHA</h1>
+    <script>
+        const button = document.getElementById('darkModeButton');
+        let darkMode = false;
+
+        button.addEventListener('click', () => {
+            darkMode = !darkMode; 
+
+            if (darkMode) {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+                button.textContent = 'Desativar Dark Mode'; 
+            } else {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                button.textContent = 'Ativar Dark Mode'; 
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+function contarVogais(frase) {
+    // Define um padrão para encontrar vogais (considera letras minúsculas e maiúsculas)
+    const regex = /[aeiouáéíóúãõ]/gi;
+    const vogais = frase.match(regex);
+    
+    // Retorna o número de vogais ou 0 se não houver
+    return vogais ? vogais.length : 0;
+}
+
+// Exemplo de uso
+console.log(contarVogais("Olá, tudo bem?")); // 6
+console.log(contarVogais("Javascript é divertido!")); // 8
+console.log(contarVogais("Exemplo sem vogais.")); // 6

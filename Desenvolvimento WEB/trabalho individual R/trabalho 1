@@ -1,0 +1,15 @@
+function isPalindromo(palavra) {
+    // Remove espaços e transforma a palavra em minúsculas
+    palavraLimpa = palavra.replace(/\s+/g, '').toLowerCase();
+    
+    // Inverte a palavra
+    palavraInvertida = palavraLimpa.split('').reverse().join('');
+    
+    // Compara a palavra original com a invertida
+    return palavraLimpa === palavraInvertida;
+}
+
+// Exemplo de uso
+console.log(isPalindromo("arara")); 
+console.log(isPalindromo("bola")); 
+console.log(isPalindromo("Um homem com um plano no Canadá"));

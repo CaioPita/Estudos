@@ -1,0 +1,41 @@
+class Aluno {
+    constructor(av,sm1,sm2,presença,avs) {
+        this.av= av,
+        this.presença = presença,
+        this.sm1 = sm1 || 0
+        this.sm2 = sm2 || 0
+        this.avs = avs;
+      
+    }
+    get media(){
+        return parseInt ((this.av + this.sm1 + this.sm2))>=6
+
+
+
+    }
+    get presenca(){
+        return parseInt (this.presença)>=25
+    }
+    get avs(){
+        return parseInt (this.avs)>=6
+    }
+   
+
+   
+        
+    }
+    let aluno = new Aluno(3, 0, 0,25,6)
+    console.log('Passou por média!',aluno.media);
+    console.log('Passou por presença!',aluno.presenca);
+    console.log('Passou na avs!',aluno.avs);
+    
+
+    class Alunoespecial extends Aluno {
+
+        
+        
+    
+
+
+    }
+    console.log('Passou na avs!' Alunoespecial.avs);

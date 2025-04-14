@@ -1,0 +1,5 @@
+git checkout main (Voltar pra main)
+git checkout nova Branch(voltar para a branch)
+git log (Mostra todas as versões)
+git push meurepo main (coloca o repositório escolhido no github)
+git pull meurepo main(coloca o repositório do github no git)

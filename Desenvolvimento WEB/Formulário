@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+<head>
+    <meta charset="utf-8"
+    <meta name="author" content="Prof. Ronaldo Candido">
+    <meta name="description" content="Reserva Hotel Estaciano">
+    <!-- Implementação futura com CSS -->
+     <link href="css_forms.css" rel="stylesheet"/>
+     <title>Reserva Hotel Estaciano</title>
+</head>
+<body>
+    <a name="topo">
+    <h1>Formulário de Reserva - Hotel Estaciano</h1>
+</a>
+    <!-- Link abrindo em outra janela/guia -->
+     <a href="http://estacio.br" target="_blank">
+        <h3> Voltar para Estácio</h3>
+     </a>
+     <!-- Imagem -->
+      <figure>
+        <figcaption>Rio de Janeiro</figcaption>
+        <img src="https://jpimg.com.br/uploads/2023/05/turismo-no-rio-de-janeiro-veja-o-que-visitar-na-cidade-maravilhosa.jpg" alt="Foto das férias no Rio de Janeiro" 
+        title="Rio de Janeiro"
+        width="400" height="300">
+      </figure>
+      <!-- Formulário usando JavaScript -->
+       <form id="reserva" action="#" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="txtnome" name="nome" required
+            placeholder="Digite o nome..." style="width: 20;"
+            /><br/>
+            <div class="campo">
+            <label class="checkbox">Sexo:
+                ><input type="radio"name="sexo"
+                value = "masculino"/>Masculino
+            </label>
+            <label class="checkbox"
+                ><input type="radio"name="sexo"
+                value = "Feminino"/>Feminino
+            </div>
+            </label>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required
+            placeholder="Digite o Email..." style="width: 20;"
+            /><br/>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required
+            placeholder="Digite o Telefone..." style="width: 20;"
+            />
+            <br/>
+            <label for="senha">Senha:</label>
+            <input type="password" 
+            id="txtsenha" name="senha" required maxlength="8"
+            placeholder="Digite a senha..." style="width: 20;"
+            />
+            <br/>
+            <label for="confirmarSenha">Confirmar Senha:</label>
+            <input type="password" id="confirmarSenha" required
+            placeholder="Confirme a senha..." style="width: 20;"
+            />
+            <br/>
+            <label for="Matrícula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required
+            placeholder="Digite a sua matricula..." style="width: 20;"
+            />
+            <input type="submit" value="Buscar..." />
+            <input type="reset" value="Limpar..." />
+            </fieldset>
+            </form>
+            <a href="#topo"><p>Voltar ao Início</p></a>

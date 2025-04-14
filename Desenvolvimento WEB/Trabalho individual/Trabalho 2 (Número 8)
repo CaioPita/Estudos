@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachorro Feliz e Triste</title>
+    <style>
+        #cachorro {
+            width: 50%; 
+            transition: opacity 0.3s;
+            position: absolute;
+            left: 30%;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doguinho!</h1>
+    <img id="cachorro" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlGEsnTsQUvmjQp9vRMiLi_A3ec0fRYRLE-g&s" alt="Cachorro" />
+
+    <script>
+        const cachorro = document.getElementById('cachorro');
+
+        cachorro.addEventListener('mouseover', () => {
+            cachorro.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQIl15qT7dMz6jia34G0lCC9VNbe3Ftdzjg&s'; 
+        });
+
+        cachorro.addEventListener('mouseout', () => {
+            cachorro.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlGEsnTsQUvmjQp9vRMiLi_A3ec0fRYRLE-g&s'; 
+        });
+    </script>
+</body>
+</html>

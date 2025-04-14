@@ -1,0 +1,14 @@
+function frasessuperincríveis() {
+    frases = [
+        "Shii, estou meditando!",
+        "HAHAHAHAHAHA, há quanto tempo.... Mugiwara!",
+        "O trabalho de um Herói é arriscar a vida protegendo quem não pode se proteger!",
+        "Nem que seja meio por cento, cada por cento é valor, quero ter a certeza que sou mais do que no dia anterior!",
+        "O Imperador do universo retornou!"
+    ];
+
+    Aleatorio = Math.floor(Math.random() * frases.length);
+    return frases[Aleatorio];
+}
+
+console.log(frasessuperincríveis());

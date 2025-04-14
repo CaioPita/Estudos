@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+    <head>
+        <meta charset="utf-8">
+        <title>Aula 4 - Abertura</title>
+        <!-- Estilizando com CSS -->
+        <style type="text/CSS"> 
+            h1{color: red;
+                font-size: 60px;
+                text-align: center;}
+            body{
+                /* Cor de fundo da página */
+                background-color: rgb(24, 16, 100);
+                /* Tipo da fonte da letra da página */
+                font-family: Arial, Helvetica, sans-serif;}
+            h2{color: blue;
+                font-size: 60px;
+                text-align: center;}
+            ol{color: blue;
+                font-size: 30px;
+                text-align: center;}
+            p{color: red;
+                font-size: 40px;
+                text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h1>Usando o CSS</h1>
+        <hr/>
+        <h2>Aprimorando com o CSS</h2>
+        <p>Os estilos em css podem ser indicados em:
+            <!-- Lista ordenada -->
+            <ol start="1" type="1">
+                <li>Em linha (InLine)</li>
+                <li>Embutido (embedding)</li>
+                <li>Externo (external)</li>
+            </ol>
+            
+        </p>
+
+    </body>
+</html>

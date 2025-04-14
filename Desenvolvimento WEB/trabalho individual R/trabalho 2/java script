@@ -1,0 +1,18 @@
+let tamanhoBalão = 50; // Tamanho inicial do balão
+let estourado = false;
+
+function inflarBalão() {
+    if (estourado) return;
+
+    const balão = document.getElementById('balão');
+    tamanhoBalão += 10; // Aumenta o tamanho do balão
+
+    if (tamanhoBalão >= 200) { // Tamanho máximo antes de estourar
+        balão.style.backgroundColor = 'red'; // Muda a cor para vermelho
+        alert('O balão estourou!');
+        estourado = true;
+    }
+
+    balão.style.width = tamanhoBalão + 'px';
+    balão.style.height = (tamanhoBalão * 1.4) + 'px'; // Ajusta a altura proporcionalmente
+}

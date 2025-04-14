@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflação do Balão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img id="bomba" src="https://media.istockphoto.com/id/1326417850/pt/vetorial/cartoon-bomb-with-lit-fuse.jpg?s=612x612&w=0&k=20&c=KW_BaBG_GLK32zWVpQ2lna8lr410Y6Vh6cH6OQob9Qo=" alt="Bomba" onclick="inflarBalão()">
+        <div id="balão" class="balão"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

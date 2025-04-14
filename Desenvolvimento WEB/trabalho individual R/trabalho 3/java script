@@ -1,0 +1,40 @@
+const textos = [
+    "A", "A", 
+    "B", "B", 
+    "C", "C", 
+    "D", "D", 
+    "E", "E"
+];
+
+let primeiraEscolha = null;
+let segundaEscolha = null;
+let bloqueado = false;
+
+function revelarTexto(botao) {
+    if (bloqueado || botao.innerText !== '?') return;
+
+    const indice = Array.from(document.querySelectorAll('.memory-button')).indexOf(botao);
+    botao.innerText = textos[indice];
+
+    if (!primeiraEscolha) {
+        primeiraEscolha = botao;
+    } else {
+        segundaEscolha = botao;
+        bloqueado = true;
+
+        if (primeiraEscolha.innerText === segundaEscolha.innerText) {
+            // Pares encontrados
+            primeiraEscolha = null;
+            segundaEscolha = null;
+            bloqueado = false;
+        } else {
+            setTimeout(() => {
+                primeiraEscolha.innerText = '?';
+                segundaEscolha.innerText = '?';
+                primeiraEscolha = null;
+                segundaEscolha = null;
+                bloqueado = false;
+            }, 1000);
+        }
+    }
+}
