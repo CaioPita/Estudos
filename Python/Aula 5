@@ -1,0 +1,71 @@
+def exemplo01_lista(idade: int,nota:float,nome:str)-> list:
+    idade+=2 #seria igual a: idade = idade +2
+    nome_fun = nome
+    nota_func = nota
+    lista = [nome_fun,idade,nota_func]
+    return lista
+def exemplo_numpy()->str:
+    import numpy
+
+    x = numpy.sin(1)
+    print(x)
+
+
+if __name__ == "__main__":
+    listinha = exemplo01_lista(40,9.8,"Caio")
+    print(listinha)
+    exemplo_numpy()
+---------------------------------------------------------------------------
+import math
+print(math.pi)
+print(math.e)
+
+ceil = math.ceil(math.pi)
+floor = math.floor(math.pi)
+sqrt = math.sqrt(2)
+fat = math.factorial(4)
+fabs = math.fabs(-45.2)
+
+print(ceil)
+print(floor)
+print(sqrt)
+print(fat)
+print(fabs)
+----------------------------------------------------------------------------
+import random
+
+while True:
+    print('''1 - Rola o dado\n 2- Sair''')
+    usuario = int(input("Digite o número que você deseja escolher: "))
+    if usuario == 1:
+        numero = random.randint(0,9)
+        print(numero)
+    else:
+        break
+-----------------------------------------------------------------------------
+import time
+from datetime import date
+x = time.time()
+print(f'Local time: {time.ctime(x)}')
+data_atual = date.today()
+print(data_atual)
+data_formatada =f'{data_atual.day}/{data_atual.month}/{data_atual.year}'
+print(data_formatada)
+data_atual2 = data_atual.strftime('%d/%m/%Y')
+print(data_atual2)
+---------------------------------------------------------------------------
+import tkinter as tk
+
+root = tk.Tk()
+width = 600
+heigth = 300
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width/2) - (width/2)
+y = (screen_height/2)- (heigth/2)
+
+root.geometry('%dx%d+%d+%d' %(width,heigth,x,y))
+root.mainloop()
+------------------------------------------------------------------------------

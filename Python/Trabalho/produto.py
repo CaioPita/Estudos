@@ -1,0 +1,21 @@
+class Produto:
+    def __init__ (self,nome: str,preco: float,quantidade: int) -> None:
+        self.nome = nome
+        self.preco = preco
+        self.quantidade = quantidade
+
+    def atualizar_preco(self,novo_preco:float) -> None:
+        self.preco = novo_preco
+
+    def atualizar_quantidade (self,nova_quantidade: int) -> None:
+        self.quantidade = nova_quantidade
+
+    def exibir_informacoes(self) -> None:
+        print( f"Produto: {self.nome}")
+        print(f"Preço: R${self.preco:.3f}")
+        print(f"Quantidade: {self.quantidade}")
+
+produto= Produto("Ps5",3.700,2)
+produto.exibir_informacoes()
+produto.atualizar_preco(4.200)
+produto.atualizar_quantidade(4)

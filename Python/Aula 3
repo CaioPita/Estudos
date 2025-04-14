@@ -1,0 +1,89 @@
+-----------------------exercício 1 ---------------------------------
+nome=input("Digite o nome do motorista:\n")
+velocidade=float(input("Digite a velocidade do carro(km/h):\n"))
+limite_velocidade= 80
+multa_base= 100
+valor_por_km= 15
+if(velocidade>limite_velocidade):
+    km_acima =velocidade -limite_velocidade
+    valor_multa = multa_base + (km_acima* valor_por_km)
+    print(f"O motorista {nome} foi multado! O valor da multa é de R$ {valor_multa:.2f}.")
+else:
+    print(f"Você está dentro do limite de velocidade.Nenhuma multa aplicada.")
+-----------------------exercício 2 ---------------------------------
+nome=input("Digite o nome do aluno:\n")
+nota1=float(input("Digite a primeira nota:\n"))
+nota2=float(input("Digite a segunda nota:\n"))
+media=(nota1+nota2)/2
+if(media>70):
+    print(f"O aluno {nome} foi aprovado com a media de {media:.1f}")
+elif(media<70):
+    print(f"O aluno {nome} foi reprovado com a media de {media:.1f}")
+-----------------------exercício 3 ---------------------------------
+x=float(input("Digite um número:\n"))
+while (x > 0):
+    print(x)
+    x = float(input("Digite um número:\n"))
+print("Fim da repetição")
+-----------------------exercício 4 ---------------------------------
+i=1
+while 1<6:
+    print(i)
+    i+=1
+-----------------------exercício 5 ---------------------------------
+cont,media_turma,soma= 1, 0 , 0
+nome=input("Digite o nome: \n")
+while nome != '-1':
+    n1 = float(input("Nota da primeira prova: \n"))
+    n2 = float(input("Nota da segunda prova: \n"))
+    media=(n1 + n2)/2
+    if media>= 70:
+        print(f"O aluno {nome} foi aprovado com media {media:.1f}.")
+    else:
+         print(f"O aluno {nome} foi reprovado com media {media:.1f}.")
+    soma+= media
+    cont+= 1
+    nome= input("Digite o nome: \n")
+
+media_turma=soma/cont
+print(f"A media da turma foi de {media_turma}")
+-----------------------------------------------------------------
+
+while True:
+    nome=input("Digite o nome: \n")
+    if nome == '-1':
+        break
+    n1 = float(input("Nota da primeira prova: \n"))
+    n2 = float(input("Nota da segunda prova: \n"))
+    media=(n1 + n2)/2
+    if media>= 70:
+        print(f"O aluno {nome} foi aprovado com media {media:.1f}.")
+    else:
+         print(f"O aluno {nome} foi reprovado com media {media:.1f}.")
+----------------------------------------------------------------
+
+while True:
+    nome=input("Digite o nome: \n")
+    if len(nome) == 0:
+        continue
+    if nome == '-1':
+        break
+    n1 = float(input("Nota da primeira prova: \n"))
+    n2 = float(input("Nota da segunda prova: \n"))
+    media=(n1 + n2)/2
+    if media>= 70:
+        print(f"O aluno {nome} foi aprovado com media {media:.1f}.")
+    else:
+         print(f"O aluno {nome} foi reprovado com media {media:.1f}.")
+    -----------------------------------------------------------------
+numero = 10
+while numero > 0:
+    print("Valor atual da variável: ",numero)
+    numero-= 1
+    if numero ==5:
+        continue
+
+
+
+
+

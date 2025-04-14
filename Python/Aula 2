@@ -1,0 +1,70 @@
+---------------------Código 1------------------------------------
+nome=input("Digite o nome do Aluno: ")
+av1=float(input("Digite a nota da AV1 do aluno: "))
+av2=float(input("Digite a nota da AV2 do aluno: "))
+media=(av1+av2)/2
+if (media>=60):
+    print(f"{nome} está aprovado com media {media:.2f}.")
+elif(media>=4):
+    print(f"{nome} está em exame final com media {media:.2f}.")
+else:
+    print(f"{nome} está reprovado com média {media:.2f}.")
+------------------------Código 2-----------------------------
+nome=input("Digite o nome: ")
+idade=int(input("Digite a idade: "))
+altura=float(input("Digite a altura(em metros): "))
+peso=float(input("Digite o peso(em kg): " ))
+imc=peso/(altura**2)
+if imc<18.5:
+    classificacao= "Abaixo do peso"
+elif imc<24.9:
+    classificacao= "Peso normal"
+elif imc<29.9:
+    classificacao= "Sobrepeso"
+elif imc<34.9:
+    classificacao= "Obesidade grau 1"
+elif imc<39.9:
+    classificacao= "Obesidade grau 2"
+else:
+    classificacao= "Obesidade grau 3"
+print(f"Nome:{nome}")
+print(f"Idade:{idade}anos")
+print(f"Altura:{altura:.2f}metros")
+print(f"Peso:{peso:.2f}kg")
+print(f"IMC:{imc:.2f}")
+print(f"Classificação:{classificacao}")
+------------------------Código 3-----------------------------
+l1=int(input("Digite o primeiro lado do triângulo: "))
+l2=int(input("Digite o segundo lado do triângulo: "))
+l3=int(input("Digite o terceiro lado do triângulo: "))
+if(l1!=l2 and l2!=l3 and l1!=l3):
+        print(f"Escaleno")
+elif(l1==l2 and l2==l3):
+        print(f"Equilatero")
+else:
+    print(f"Isósceles")
+------------------------Código 4-----------------------------
+num=int(input("Digite o numero: "))
+if(num%2==0):
+        print(f"Número par!")
+else:
+        print(f"Número impar!")
+------------------------Código 5-----------------------------
+nome=input("Digite o seu nome: ")
+cpf=int(input("Digite o seu cpf: "))
+renda=float(input("Digite a sua renda: "))
+if(renda<=1903.98):
+        aliquota=("isento")
+elif(renda<=2826.65):
+        aliquota=("7.5%")
+elif(renda<=3751.05):
+        aliquota=("15%")
+elif(renda<=4664.68):
+        aliquota=("22.5%")
+else:
+        aliquota=("27.5%")
+print(f"Nome:{nome}")
+print(f"cpf:{cpf}")
+print(f"renda:{renda}")
+print(f"A sua aliquota de dedução do imposto de renda em 2023 é de:{aliquota}"
+

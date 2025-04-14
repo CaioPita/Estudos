@@ -1,0 +1,70 @@
+-------------------------------------exemplo 1 -----------------------------------------
+for controle in range(1,10):
+    print(controle)
+-------------------------------------exemplo 2-----------------------------------------
+texto = "Caio"
+for char in texto:
+    print(char)
+-------------------------------------exemplo 3 -----------------------------------------
+for letra in 'caio':
+    if letra =='o':
+        break
+print(f'letra',letra)
+-------------------------------------exemplo 4 -----------------------------------------
+for multiplicador in range(1,11):
+    numero=1
+    while numero<=10:
+        resultado = multiplicador*numero
+        print(f"{multiplicador} x {numero} = {resultado}")
+        numero +=1
+-------------------------------------exemplo 5 -----------------------------------------
+comando = input("\nDigite a mensagem: \n")
+match comando:
+    case 'Oi':
+        print('Olá meu amigo.')
+    case 'Tchau':
+        print('Até logo')
+    case _:
+        print('Dado não encontrado')
+-------------------------------------exemplo 6 -----------------------------------------
+response_code = 404
+
+match response_code:
+    case 400:
+        print("Server sem resposta.")
+    case 401|403:
+        print('Server se recusa a enviar retorno.')
+    case 404:
+        print("Server não encontrado.")
+-------------------------------------exercicio 1 -----------------------------------------
+while True:
+    print('R -Residência\n C -Comercio \n I-Indústria \n S- Sair')
+    tipo_instalacao =input('Digite o tipo de instalação(R,C,I,S): ').upper()
+    if tipo_instalacao=='S':
+        break
+    faixa_kwh = input("Digite a faixa de kwh consumida(500,1000,5000): ")
+    match tipo_instalacao:
+        case 'R':
+            if int(faixa_kwh)<= 500:
+                preco = int(faixa_kwh) *0.40
+            else:
+                preco = int(faixa_kwh) *0.65
+            print(f'O valor a pagar é: R${preco:.2f}')
+        case 'C':
+            if int(faixa_kwh) <= 1000:
+                preco = int(faixa_kwh) * 0.55
+            else:
+                preco = int(faixa_kwh) * 0.60
+            print(f'O valor a pagar é:R${preco:.2f}')
+        case 'I':
+            if int(faixa_kwh) <= 5000:
+                preco = int(faixa_kwh) * 0.60
+            else:
+                preco = int(faixa_kwh) * 0.65
+            print(f'O valor a pagar é:R${preco:.2f}')
+        case 'S':
+            break
+        case _:
+            print('Tipo de instalação inválida.Tente novamente.')
+            continue
+-------------------------------------exemplo 2 -----------------------------------------

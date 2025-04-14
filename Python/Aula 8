@@ -1,0 +1,99 @@
+def funcao_sets_planeta ():
+    planeta_anao = {'Plutão','Ceres','Eris','Haumea','Makemake'}
+    print(planeta_anao)
+    print('Ceres' in planeta_anao)
+    print('Lua' in planeta_anao)
+    print('Eris' not in planeta_anao)
+    for astro in planeta_anao:
+        print(astro.upper(),end=' - ')
+
+def funcao_sets_times():
+    times = {'Flamengo', 'Fluminense', 'Vasco', 'Nova Iguaçu'}
+    times2 = {'Flamengo', 'Fluminense', 'Vasco', 'Madureira'}
+    clubes = times.update(times2)
+    times.add('Olaria')
+    times.add('Flamengo')#Elemento já existe, não é adicionado.
+    print(times)
+    times.remove('Madureira')#causa erro se o elemento não estiver no conjunto.
+    print(times)
+    times.discard('Olaria')
+    print(times)
+    print(times | times2)
+    print(times.union(times2))
+    print(times & times2)
+    print(times.intersection(times2))
+    print(clubes)
+    times |= times2
+    print(times)
+def funcao_setsex():
+#criando um set vazio:
+    set_vazio = set()
+#criando um set com elementos:
+    conjunto = {1,2,3,"quatro","cinco"}
+#adicionando um elemento a um set:
+    conjunto.add(6)
+#removendo um elemento de um set:
+    conjunto.remove(2) #ou conjunto.discard(2)
+#realizando operações com sets
+    outro_conjunto = {3,4,5,6,7}
+    uniao = conjunto.union(outro_conjunto)
+    interseccao = conjunto.intersection(outro_conjunto)
+    diferenca = conjunto.difference(outro_conjunto)
+
+    print(conjunto)
+    print(outro_conjunto)
+    print(uniao)
+    print(interseccao)
+    print(diferenca)
+def funcao_frozensets():
+    lords=['Karl','Ikit','Eltharion','Groon']
+    lords= frozenset(lords)
+    magos= ['Mannfred','Setra','Gelt','Ming']
+    magos=frozenset(magos)
+    especiais=set([lords,magos,'Tyrion','Isabela'])
+    for especial in especiais:
+        print(especial)
+def funcao_verifica(lista,valor):
+    for indice, item in enumerate(lista):
+        if item ==valor:
+            return indice
+    return None
+def calculo(esquerda,direita,operador):
+    if operador =='+':
+        return esquerda + direita
+    elif operador=='-':
+        return esquerda - direita
+    elif operador =='*':
+        return esquerda * direita
+    elif operador =='/':
+        return esquerda / direita
+def calculo1(esquerda: float,direita:float,operador:str='*')->float:
+    match(operador):
+        case '+':
+            return esquerda + direita
+        case '-':
+            return esquerda - direita
+        case '*':
+            return esquerda * direita
+        case '/':
+            return esquerda / direita
+        case _:
+            return 0
+
+
+
+if __name__ == '__main__':
+    lista= [1,2,3,4,5]
+    print(funcao_verifica(lista,2))
+    print(funcao_verifica(lista,7))
+    # chamada valida(em ordem e todos nomeados)
+    print(calculo(esquerda=4, direita=2, operador='-'))
+    # chamada valida(fora de ordem,mas todos nomeados)
+    print(calculo(operador='+', direita=2, esquerda=8))
+    # chamada invalida(último argumento sem nomeação)
+    print(calculo(3, 1, '-'))
+    #chamada valida(opcional omitido)
+    print(calculo(2,4,5))
+    print(calculo(8,4,'/'))
+
+

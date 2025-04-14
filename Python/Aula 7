@@ -1,0 +1,81 @@
+def funcao_concatenar ():
+    a = [22,8,10]
+    b = [9,21,17]
+    c = a + b
+    print(f"C: {c}")
+
+def funcao_remocao():
+    a = [1,2,3,4,5]
+    del a [2:4]
+
+    print(f"A: {a}")
+
+def funcao_remocao1():
+    lista = ["laranja","azul","verde","preto"]
+    lista.remove("azul")
+    print(lista)
+def funcao_remocaopop():
+    lista = ["laranja","azul","verde","preto"]
+    lista.pop()
+    print(lista)
+def funcao_remocaochecar():
+    L = ["triangulo","quadrado","circulo","retangulo"]
+    if "triangulo" in L:
+        print("sim,'triangulo' esta presente na lista")
+def funcao_remocaototal():
+    lista = ["laranja","azul","verde","preto"]
+    lista.clear()
+    print(lista)
+def funcao_oconstrutor():
+    minha_lista = list(("carro","casa","moto"))
+    print(minha_lista)
+def funcao_range():
+    L = list(range(100,1100,50))
+    print(L)
+def funcao_dicionario():
+    medias = {"Rafael": 6,
+              "Geovanna":8,
+              "Caio": 10,
+              "Gilson": 9}
+    nome = input("Informe o nome do aluno: ")
+    if nome in medias:
+        print(f"Media = {medias[nome]} ")
+#adicionando novo par chave/valor
+    medias["Sara"] = 8
+#mostrando todas as chaves
+    print(medias.keys())
+#mostrando todos os valores
+    print(medias.values())
+
+#percorrendo com for
+    for nome, nota in medias.items():
+        if nota <7:
+            print(f"{nome} reprovado!")
+def funcao_dicionario1():
+    artilharia_libertadores_24 = {"Júnior Santos": ['Botafogo',10,9],
+                                  "Miguel Borja": ['River Plate',9,6],
+                                  "Paulinho": ['Atlético Mineiro',9,6],
+                                  "Maximiliano Silvera" : ['Peñarol',10,6],
+                                  "Pedro": ['Flamengo',6,5]}
+    print(artilharia_libertadores_24["Pedro"])
+def funcao_dicionariomudandovalores():
+    carros= {"marca": "Ford",
+             "modelo": "Mustang",
+             "ano": 1966}
+    carros["ano"] =1967
+    #usuario = int(input("Digite o ano do carro: "))
+    #carros["ano"] = usuario
+    carros["ano"] = int(input("Digite o ano do seu carro:" ))
+    print(carros)
+if __name__ == '__main__':
+    funcao_concatenar()
+    funcao_remocao()
+    funcao_remocao1()
+    funcao_remocaopop()
+    funcao_remocaochecar()
+    funcao_remocaototal()
+    funcao_oconstrutor()
+    funcao_range()
+    funcao_dicionario()
+    funcao_dicionario1()
+    funcao_dicionariomudandovalores()
