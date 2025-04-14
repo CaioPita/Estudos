@@ -1,0 +1,65 @@
+Complexidade de Tempo 
+
+Melhor Caso: O(n log n) 
+
+Pior Caso: O(n log n) 
+
+Caso Médio: O(n log n) 
+
+O heapsort tem uma complexidade de tempo O(n log n) para todos os casos (melhor, pior e médio). Isso acontece porque a construção inicial do heap leva O(n) e a operação de remoção repetida (que move o maior elemento para o final do array) leva O(log n) para cada um dos n elementos. 
+
+construção inicial do heap (O(n)): 
+
+ 
+
+O primeiro passo do Heapsort é construir um heap (max-heap ou min-heap) a partir do array. Para fazer isso, o algoritmo realiza uma série de operações de "heapify" (ajuste da estrutura de heap) que reorganizam os elementos. Essa fase é feita de maneira eficiente em O(n), porque nem todos os elementos precisam ser processados totalmente em O(log n), especialmente aqueles na base da árvore (os níveis mais profundos). 
+
+ 
+
+Remoção repetida do maior elemento (O(log n) para cada elemento): 
+
+ 
+
+Depois que o heap é construído, o algoritmo remove o maior elemento (para o max-heap) ou o menor (para o min-heap), que está localizado na raiz da estrutura, e o coloca na posição final do array. Cada remoção requer reorganizar o heap para manter a propriedade do heap, o que leva O(log n) para cada remoção. 
+
+ 
+
+Como essa operação precisa ser repetida n vezes para todos os elementos no array, o tempo total para essa etapa é O(n log n). 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Complexidade de Espaço 
+
+Espaço Adicional: O(1) 
+
+O heapsort é um algoritmo in-place, ou seja, ele não requer espaço extra significativo além do que já é usado pela entrada. Apenas uma quantidade constante de espaço adicional é necessária para variáveis temporárias. 
+
+In-place significa que o Heapsort não cria arrays auxiliares (como o Mergesort, por exemplo). Ele usa apenas algumas variáveis temporárias durante as operações de troca de elementos. Por isso, a complexidade de espaço adicional é O(1), que representa uma quantidade de memória fixa e independente do tamanho da entrada. 
+
+Essa característica torna o Heapsort eficiente em termos de espaço, o que é uma vantagem sobre outros algoritmos de ordenação com a mesma complexidade de tempo, como o Mergesort, que requer O(n) de espaço adicional. 
+
+ 
+
+Estabilidade 
+
+Instável 
+
+O heapsort é instável, o que significa que ele não preserva a ordem relativa dos elementos com chaves iguais. Durante as operações de troca dentro do heap, a posição dos elementos pode mudar sem manter a ordem original. 
+
+A instabilidade ocorre devido à forma como o Heapsort faz as trocas para manter a estrutura de heap. Quando um elemento da raiz do heap é movido para a última posição do array e a estrutura de heap é reorganizada (heapify), os elementos podem ser trocados de maneira que elementos com valores iguais percam sua posição relativa original. 
+
+Por exemplo, se o array original contém dois elementos com o mesmo valor e o primeiro ocorre antes do segundo, no array ordenado, o segundo elemento pode acabar na frente do primeiro após o processo de troca e reorganização do heap. 
+
+Resumo das Complexidades do Heapsort: 
+
+Complexidade de Tempo: O Heapsort tem uma complexidade de O(n log n) em todos os casos (melhor, médio e pior), devido à construção eficiente do heap em O(n) e a repetida remoção de elementos com custo de O(log n). 
+
+Complexidade de Espaço: O algoritmo é in-place, o que significa que usa apenas O(1) de espaço adicional, já que faz a ordenação diretamente no array de entrada, sem estruturas auxiliares. 
+
+Estabilidade: O Heapsort não é estável, pois a ordem relativa de elementos com valores iguais pode ser alterada durante as trocas necessárias para reorganizar o heap. 

@@ -1,0 +1,15 @@
+----------------------Pilha--------------------------
+Toda pilha tem a variável TOPO
+O código terá ponteiro e Struct
+-----------------------Filas--------------------------
+Processamento de tarefas em um sistema operacional(Gerenciamento de processos): Fila é usada para agendar processos ou tarefas.
+Exemplos: Impressoras
+Buffer de dados
+Como implementar uma fila?
+3 funções:
+Função de enfileira
+Função de desenfileira
+Função principal(main)
+variáveis para gerenciar a fila : Retaguarda e Frente
+Retarguarda - Coloca as informações na fila
+Frente - Tira as informações da fila
