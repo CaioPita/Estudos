@@ -1,0 +1,44 @@
+package exercicio06;
+
+public class Pessoa {
+	
+		private String nome;
+		private int idade;
+		private String profissao;
+		
+		public Pessoa(String nome, int idade, String profissao) {
+			super();
+			this.nome = nome;
+			this.idade = idade;
+			this.profissao = profissao;
+		}
+		public String getNome() {
+			return nome;
+		}
+		public int getIdade() {
+			return idade;
+		}
+		public String getProfissao () {
+			return profissao;
+		}
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+		public void setIdade(int idade) {
+			this.idade = idade;
+		}
+		public void setProfissao(String profissao) {
+			this.profissao = profissao;
+		}
+	
+		public static void main(String[]args) {
+			Pessoa pessoa = new Pessoa("Raphael",38,"Desenvolvedor");
+			System.out.println("Nome: "+ pessoa.getNome());
+			System.out.println("Idade" + pessoa.getIdade());
+			System.out.println("Profissão: "+ pessoa.getProfissao());
+		}
+		
+		
+		
+		
+}

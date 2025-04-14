@@ -1,0 +1,38 @@
+package exercicio05;
+
+public class Exerciciojava {
+	
+		
+	public static float fatorial(int n) {
+			int fat = 1;
+			for(int i  = 1; i<=n;i++) {
+				
+				fat *= i;	
+			}
+			return fat;
+	}
+	public static void main(String[]args) {
+		int n = Integer.parseInt(System.console().readLine("Digite o valor para calcular o fatorial"));
+		System.out.println("Fatorial de " + n + " = " + fatorial(n));
+	}	
+	}		
+----------------------------- Segunda forma de fazer---------------------------------------------------------------
+import java.util.Scanner;
+public class Exercicio05_1{
+	public static void main(String[] args){
+		try(Scanner scanner = new Scanner (System.in)){
+			System.out.print("Digite um número inteiro: ");
+			int numero = scanner.nextInt();
+
+			int fatorial = calcularFatorial(numero);
+			System.out.println("Fatorial de " + numero+ "é" + fatorial);
+}
+}
+public static int calcularFatorial(int n){
+	if(n ==0|| n ==1){
+		return 1;
+	}else{
+		return n * calcularFatorial(n-1);
+	}
+}
+}

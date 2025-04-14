@@ -1,0 +1,33 @@
+package exercicio07;
+
+
+abstract class Animal {
+	  public void FazerBarulho() {
+	    System.out.println("O animal fez um som");
+	  }
+	}
+
+	class Porco extends Animal {
+	  public void FazerBarulho() {
+	    System.out.println("O Porco diz: wee wee");
+	  }
+	}
+
+	class Cachorro extends Animal {
+	  public void FazerBarulho() {
+	    System.out.println("O cachorro diz: bow wow");
+	  }
+	}
+
+	public class Exercicio02 {
+	  public static void main(String[] args) {
+	    Animal cachorro = new Cachorro();
+	    Animal gato = new Gato();
+	    Cachorro.FazerBarulho();
+	    Porco.FazerBarulho();
+	  }
+	}
+	
+
+
+
