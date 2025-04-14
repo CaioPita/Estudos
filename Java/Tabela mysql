@@ -1,0 +1,13 @@
+create table users(id int primary key auto_increment
+nome varchar(250),email varchar(250) unique, status varchar (20))
+
+insert into users values(null,'Belem','belem@gmail.com'
+select * from users
+
+?
+@entity
+@table(name="users")
+public class Users{
+@Id
+private Integer id;
+}

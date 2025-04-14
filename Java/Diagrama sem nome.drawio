@@ -1,0 +1,8 @@
+interface (Double soma(n1 ,n2,n3,n4)
+class somasimples
+soma(n1,n2,n3,)
+class somaavançado
+soma(n1,n2,n3,n4)
+class aluno{
+nome, interface
+Main

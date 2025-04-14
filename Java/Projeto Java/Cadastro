@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh; /* Altura total da viewport */
+        }
+        .image-section, .form-section {
+            flex: 1; /* Cada seção ocupa 50% do espaço */
+        }
+        .image-section {
+            background-image: url('Imagem do WhatsApp de 2024-10-24 à(s) 12.18.48_e5b7b200.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 60px 60px 0;
+            box-shadow: rgba(0, 0, 0, 0.25);
+        }
+        .form-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            
+        }
+        form div {
+            margin-bottom: 15px;
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            background-color: #777777;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ebe4e4;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color: #CFCDCD            ;
+           
+        }
+        button {
+            padding: 10px 28px;
+            background-color:#0A3A5E;            ;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-animation-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        button:hover {
+            background-color: #0a2949;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        h1{
+            text-align: center;
+            position: absolute;
+            left: 70%;
+            top: 25%;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section"></div>
+    <div class="form-section">
+        <form action="/submit" method="post">
+            <div>
+                <h1>Login</h1>
+                <br><br><br><br><br><br>
+                <input type="nome" id="nome" name="nome" placeholder="Nome" required>
+                <br><br><br>
+            </div>
+            <div>
+                
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

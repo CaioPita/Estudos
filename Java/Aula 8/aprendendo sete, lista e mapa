@@ -1,0 +1,100 @@
+package lista;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Lista {
+  //estou mentindo no OOO
+  //cara de pau 
+	//conceito
+	public static void main(String[] args) {
+		 Integer n[]=new Integer[3];
+		   n[0] = 100;
+		   n[1]=200;
+		   System.out.println(n.length);
+	List <Integer> lista = new ArrayList<Integer>();
+		 lista.add(10);
+		 lista.add(5);
+		 lista.add(100);
+		 lista.add(200);
+		 Collections.sort(lista);
+		 
+		 int numero=10;
+		 System.out.println("tamanho size:" + lista.size());
+		 if (lista.contains(numero)) {
+			 System.out.println("pos" +lista.indexOf(numero));
+			 System.out.println("buscando;"+ lista.get(lista.indexOf(numero)));
+		 }
+		 
+		 
+		 
+		
+		
+	}
+}
+
+============
+
+package lista;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Sete {
+	public static void main(String[] args) {
+
+	Set <Integer> sete=new TreeSet<Integer>();
+	 sete.add(10);
+	 sete.add(5);
+	System.out.println(sete.add(10));
+	sete.add(100);
+	for (Integer n: sete) {
+		System.out.println(n);
+	}
+	System.out.println(sete.size());
+	
+	
+	}
+}
+
+===========
+
+
+package lista;
+
+import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Mapa {
+
+	
+	public static void main(String[] args) {
+		Map<String,Object> mapa=new HashMap<String,Object>();
+
+		 mapa.put("chave-1", LocalDate.now());
+		 mapa.put("chave-2", LocalDateTime.now());
+		 mapa.put("chave-3", Boolean.TRUE);
+		                     //ano-mes-dia hora-minuto-segundo ...
+		 mapa.put("chave-4", new Date("10/08/2014 20:02:10"));
+		 
+		 System.out.println(mapa.get("chave-4"));
+		 
+		 for (String pos: mapa.keySet()) {
+			 System.out.println(mapa.get(pos));
+		 }
+		
+		
+		
+		
+		
+	}
+}
+
+
+
+
+ 

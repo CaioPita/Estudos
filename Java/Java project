@@ -1,0 +1,192 @@
+package br.com.arq.models;
+
+public class Users {
+
+	private Long id;
+	private String name;
+	private String email;
+	private String password;
+	
+	public Users() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Users(Long id, String name, String email, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
+
+	
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + "]";
+	}
+	
+}
+===================
+
+package br.com.arq.input;
+
+import java.util.Scanner;
+
+public class UsersInput {
+
+	
+	 public String lerName() {
+		 System.out.println("entre com Nome :");
+		 Scanner in = new Scanner(System.in);
+		 return in.nextLine();
+	 }
+	 
+	 public String lerEmail() {
+		 System.out.println("entre com Email :");
+		 Scanner in = new Scanner(System.in);
+		 return in.nextLine();
+	 }
+	 
+	 public String lerId() {
+		 System.out.println("entre com Id :");
+		 Scanner in = new Scanner(System.in);
+		 return in.nextLine();
+	 }
+	 
+	 
+	 public String lerPassword() {
+		 System.out.println("entre com password :");
+		 Scanner in = new Scanner(System.in);
+		 return in.nextLine();
+	 }
+	 
+	} 
+	 
+	=======================
+
+
+	 
+	 package br.com.arq;
+
+import br.com.arq.input.UsersInput;
+import br.com.arq.models.Users;
+
+public class ApplicacaoUsers {
+
+	
+	 public static void main(String[] args) {
+		  UsersInput input = new UsersInput();
+		  Users users = new Users();
+		  //converte em Long
+		  //Integer.parseInt
+		  users.setId(Long.parseLong(input.lerId()));
+		  users.setName(input.lerName());
+		  
+		  System.out.println(users);
+		  
+		  
+	}
+}
+
+	 
+	 ========================
+
+package br.com.arq;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import br.com.arq.input.UsersInput;
+import br.com.arq.models.Users;
+
+public class ApplicacaoUsers {
+
+	
+	 public static void main(String[] args) {
+		  List<Users> lista = new ArrayList<Users>(); //estou aqui (sou um grupo)
+		  
+		  String opcao="nao";
+		   
+		  for (int i=0;i<3;i++) {
+		   System.out.println("Quantidade de vezes que estou executando"+ (i+1));
+		    UsersInput input = new UsersInput();
+		    Users users = new Users();
+		      users.setId(Long.parseLong(input.lerId()));
+		      users.setName(input.lerName());
+		      lista.add(users); // armazeno cada usuario
+		    
+	      System.out.println(users);
+		  }
+		  
+		  System.out.println(lista);  // eu imprimo todos os usuarios
+		  
+		  
+	}
+}
+
+	========
+package br.com.arq;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import br.com.arq.input.UsersInput;
+import br.com.arq.models.Users;
+
+public class ApplicacaoUsers {
+
+	
+	 public static void main(String[] args) {
+		  List<Users> lista = new ArrayList<Users>();  
+		  
+		  String opcao="nao";
+		   
+		  for (int i=0;i<3;i++) {
+		   System.out.println("Quantidade de vezes que estou executando"+ (i+1));
+		    UsersInput input = new UsersInput();
+		    Users users = new Users();
+		      users.setId(Long.parseLong(input.lerId()));
+		      users.setName(input.lerName());
+		      lista.add(users);  
+		    
+	        System.out.println(users);
+		  }
+		  
+		  System.out.println(lista);  // eu imprimo todos os usuarios
+		  
+		  
+	}
+}
+
+
+	 
+ 

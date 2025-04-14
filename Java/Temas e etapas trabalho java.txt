@@ -1,0 +1,11 @@
+TEMAS - Cesta de Compras
+      -  Simular um Caixa Eletrônico
+      -  Cadastro Playlist(Musica)
+      -  Cadastro Filme (Filme, avaliação, oscar,diretor)
+      -  Venda de Jogos ou Torneio de Jogos
+      -  Sistemas com vários Jogos
+4 etapas - Modelagem 
+         - OO
+         - Banco de Dados
+         - Visual Bacana
+         - Login 

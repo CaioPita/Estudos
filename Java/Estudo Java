@@ -1,0 +1,11 @@
+Java é uma linguagem que roda em qualquer sistema operacional.
+JRE(Usuário) - Java Runtime Environment
+JDK(Programador) - Java Development Kit
+
+Regras CameCase
+MinhaClasse - Classe a primeira letra das palavras é em caixa alta.
+meuAtributo - Atributo a segunda letra da palavra é em caixa alta.
+minhaVariável-Variável a segunda letra da palavra é em caixa alta.
+meuMétodo - Método a segunda letra da palavra é em caixa alta.
+meu_pacote - Pacote é tudo em letra minúscula.
+MINHA_CONSTANTE - Constante é tudo em letra maiúscula.

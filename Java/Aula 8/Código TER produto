@@ -1,0 +1,176 @@
+package oo;
+
+public class Produto {
+	public Produto(Integer idProduto, String nomeProduto, Double preco) {
+		super();
+		this.idProduto = idProduto;
+		this.nomeProduto = nomeProduto;
+		this.preco = preco;
+	}
+
+
+
+
+
+	public Produto(Integer idProduto) {
+		super();
+		this.idProduto = idProduto;
+	}
+	private Integer idProduto;
+	private String nomeProduto;
+	private Double preco;
+	
+	public Produto() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Produto [idProduto=" + idProduto + ", nomeProduto=" + nomeProduto + ", preco=" + preco + "]";
+	}
+
+
+
+
+
+	public Integer getIdProduto() {
+		return idProduto;
+	}
+	public void setIdProduto(Integer idProduto) {
+		this.idProduto = idProduto;
+	}
+	public String getNomeProduto() {
+		return nomeProduto;
+	}
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+	public Double getPreco() {
+		return preco;
+	}
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+
+
+
+
+
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}
+package oo;
+
+public class ItemProduto {
+
+	 private Integer idItem;
+     //tem (has) one to one
+	 private Produto produto;
+     
+	 private Integer quantidade=1;
+	 
+	 private Double total=0.;
+
+	 public ItemProduto() {
+	}
+	
+	 
+	 
+	 public ItemProduto(Integer idItem) {
+		this.idItem = idItem;
+	}
+
+
+
+	public ItemProduto(Integer idItem,  Integer quantidade, Double total) {
+			super();
+			this.idItem = idItem;
+			this.quantidade = quantidade;
+			this.total = total;
+		}
+
+	 
+	public ItemProduto(Integer idItem, Produto produto, Integer quantidade, Double total) {
+		super();
+		this.idItem = idItem;
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.total = total;
+	}
+
+
+
+	public Integer getIdItem() {
+		return idItem;
+	}
+
+	public void setIdItem(Integer idItem) {
+		this.idItem = idItem;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public Double getTotal() {
+		this.total = produto.getPreco() * this.quantidade;
+		return total;
+	}
+
+ 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+}
+
+
+
+ package oo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Produto p1 = new Produto(100,"xanxung",200.);
+		Produto p2 = new Produto(200,"Polystation",100.);
+		ItemProduto item = new ItemProduto();
+		item.setProduto(p1);
+		item.setIdItem(100);
+		item.setQuantidade(5);
+		
+		System.out.println("Nome:" +item.getProduto().getNome());
+		System.out.println("preço: "+item.getProduto().getPreco());
+		System.out.println("quantidade:"+ item.getQuantidade());
+		System.out.println("Total: " + item.getTotal());
+	}
+}

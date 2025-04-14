@@ -1,0 +1,133 @@
+package oo2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Funcionario {
+ 
+	 private Integer id;
+	 private String nome;
+	 private String profissao;
+	 private Double salario;
+	 private List<Telefone> telefones;
+	 
+	public Funcionario(Integer id, String nome, String profissao, Double salario, List<Telefone> telefones) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.profissao = profissao;
+		this.salario = salario;
+		this.telefones = telefones;
+	}
+	 public Funcionario() {
+	 
+	}
+	public Funcionario(int i, String string, String string2, double d) {
+		// TODO Auto-generated constructor stub
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getProfissao() {
+		return profissao;
+	}
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
+	}
+	public Double getSalario() {
+		return salario;
+	}
+	public void setSalario(Double salario) {
+		this.salario = salario;
+	}
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+ 
+	public void adicionarTelefone(Telefone telefone) {
+		if (telefones==null) {
+			telefones = new ArrayList<Telefone>();
+		}
+		telefones.add(telefone);
+		
+	}
+	 
+	 
+	
+}
+package oo2;
+
+public class Telefone {
+	
+	public Telefone(Integer idTelefone, String operadora, String numero) {
+		super();
+		this.idTelefone = idTelefone;
+		this.operadora = operadora;
+		this.numero = numero;
+	}
+
+	private Integer idTelefone;
+	private String operadora;
+	private String numero;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Telefone [idTelefone=" + idTelefone + ", operadora=" + operadora + ", numero=" + numero + "]";
+	}
+	public Integer getIdTelefone() {
+		return idTelefone;
+	}
+	public void setIdTelefone(Integer idTelefone) {
+		this.idTelefone = idTelefone;
+	}
+	public String getOperadora() {
+		return operadora;
+	}
+	public void setOperadora(String operadora) {
+		this.operadora = operadora;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	
+	public Telefone() {
+		
+	}
+	public Telefone(int idTelefone2, String operadora2, int i) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}
+package oo2;
+
+public class Main {
+	public static void main(String[] args) {
+		Telefone telefone1 = new Telefone(1,"vivo","21965524957");
+		Telefone telefone2 = 
+				new Telefone(2,"claro","21975542244");
+		
+		Funcionario f = new Funcionario(100,"belem","programador senior", 100.);
+		f.adicionarTelefone(telefone1);
+		f.adicionarTelefone(telefone2);
+		
+		System.out.println(f);
+		System.out.println(f.getTelefones());
+	}
+
+}
