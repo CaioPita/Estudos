@@ -1,6 +1,7 @@
 package pessoa;
 
 public class MainPrototypeCopy {
+
 	public static void main(String[] args) {
 		// Cria uma pessoa original com um endereço.
 		Endereco endereco = new Endereco("Rua A");

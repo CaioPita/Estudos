@@ -1,6 +1,7 @@
 package pessoa;
 
 public class Endereco {
+
 	private String rua;
 
 	public Endereco(String rua) {
@@ -23,4 +24,5 @@ public class Endereco {
 	
 	
 	
+
 }
