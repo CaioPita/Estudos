@@ -1,0 +1,35 @@
+from banco import BancoDeDados
+from pessoa import Pessoa
+from marca import Marca
+from veiculo import Veiculo
+
+if __name__ == "__main__":
+    #Criando uma instância da classe BancoDeDados
+    banco = BancoDeDados()
+    #Conectando ao banco de dados
+    banco.conectar()
+    #Criando as tabelas necessárias
+    banco.criar_tabelas()
+    #inserindo uma pessoa
+    pessoa1 = Pessoa(cpf=12345678900, nome= "Raphael",nascimento="1984-07-26,oculos=True")
+    banco.inserir_pessoa(pessoa1)
+    #Inserindo uma marca
+    marca1 = Marca(id=1, nome= "Fiat", sigla="FIA")
+    banco.inserir_marca(marca1)
+    #Inserindo um veiculo
+    veiculo1 = Veiculo ( placa= "LRW1I27" , cor= "Cinza", proprietario= pessoa1,marca = marca1)
+    banco.inserir_veiculo(veiculo1)
+    #Buscando todas as pessoas
+    print("Pessoas : ")
+    for pessoa in banco.buscar_todas_pessoas():
+        print(pessoa)
+    #Buscando todas as marcas
+    print("\nMarcas: ")
+    for marca in banco.buscar_todas_marcas():
+        print(marca)
+    #buscando todos os veiculos
+    print("\nVeiculos: ")
+    for veiculos in banco.buscar_todos_veiculos():
+        print(veiculo)
+    #Fechando a conexão com o banco de dados
+    banco.fechar_conexao()
